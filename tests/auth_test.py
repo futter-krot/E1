@@ -1,4 +1,4 @@
-import sys, pytest, pytest_cov
+import os, sys, pytest, pytest_cov
 sys.path.append(os.getcwd())
 from .. import gallows
 
