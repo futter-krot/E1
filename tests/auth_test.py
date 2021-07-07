@@ -1,5 +1,5 @@
 import pytest, pytest_cov
-from .. import gallows
+from . import gallows
 
 class TestClass:
 
