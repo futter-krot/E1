@@ -1,6 +1,6 @@
 import pytest, pytest_cov
-from E1.gallows import Gallow, choose_word, calculate_score, create_game, choices, attempts
-import E1.gallows
+from ..gallows import Gallow, choose_word, calculate_score, create_game, choices, attempts
+import ..gallows
 
 class TestClass:
 
