@@ -57,5 +57,5 @@ def start():
 	game = Gallow()
 	game.round()
 
-if __name__ =='__main__':
+if __name__ == '__main__':
 	start()
