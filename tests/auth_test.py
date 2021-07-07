@@ -1,6 +1,6 @@
 import pytest, pytest_cov
 from ..gallows import Gallow, choose_word, calculate_score, create_game, choices, attempts
-from ... import gallows
+from .. import gallows
 
 class TestClass:
 
