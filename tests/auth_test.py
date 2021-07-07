@@ -1,5 +1,7 @@
-import pytest, pytest_cov
-from E1 import gallows
+import sys, pytest, pytest_cov
+from .. import gallows
+
+sys.path.append(os.getcwd())
 
 class TestClass:
 
