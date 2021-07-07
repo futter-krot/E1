@@ -1,7 +1,7 @@
 language: python
 os: windows
 python:
-  - "3.9.2"
+  - "3.9"
 install:
 - pip install -r requirements.txt
 script:
