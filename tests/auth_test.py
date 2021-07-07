@@ -1,5 +1,5 @@
 import os, sys, pytest, pytest_cov
-sys.path.append(os.getcwd())
+sys.path.append("..") # Adds higher directory to python modules path
 from E1 import gallows
 
 
