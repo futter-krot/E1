@@ -1,43 +1,61 @@
-# Created using Python 3.9.2
+import random
 
-import random, pytest
+choices = ['skillfactory', 'testing', 'blackbox', 'pytest', 'unittest', 'coverage']
+attempts = 4
 
-def round():
-	choices = ['skillfactory', 'testing', 'blackbox', 'pytest', 'unittest', 'coverage']
-	word = random.choice(choices)
-	cypher = '-' * len(word)
-	attempts = 4
+def choose_word(word_list):
+    return random.choice(word_list)
 
-	while attempts != 0:
-		print(cypher)
-		guess = str(input('Try to guess the letter: ')).lower()
+def calculate_score(wrong_guesses):
+    return max(attempts - wrong_guesses, 0)
 
-		if guess in word:
-			print('Your guess is right')
-			new = ''
+class Gallow():
 
-			for i in range(len(word)):
+	def __init__(self):
+		self.word = choose_word(choices)
+		self.cypher = '-' * len(self.word)
+		self.attempts = 4
+		
+	def round(self):
 
-				if guess == word[i]:
-					new += guess
+		while self.attempts != 0:
+			print(self.cypher)
+			guess = str(input('Try to guess the letter: ')).lower()
 
-				else:
-					new += cypher[i]
-			cypher = new
+			if guess in self.word:
+				print('Your guess is right')
+				new = ''
 
-		else:
+				for i in range(len(self.word)):
 
-			if attempts == 1:
-				print('You lost!')
+					if guess == self.word[i]:
+						new += guess
+
+					else:
+						new += self.cypher[i]
+				self.cypher = new
+
+			else:
+
+				if self.attempts == 1:
+					print('You lost!')
+					break
+				print('Your guess is wrong')
+				self.attempts -= 1
+
+			if self.cypher == self.word:
+				print('You won!')
 				break
-			print('Your guess is wrong')
-			attempts -= 1
+		ans = str(input('Wanna play again? Y/N: '))
+		start() if ans == 'Y' else print('\nBye')
 
-		if cypher == word:
-			print('You won!')
-			break
-	ans = str(input('Wanna play again? Y/N: '))
-	round() if ans == 'Y' else print('\nBye')
+def create_game():
+    game = Gallow()
+    return game
+
+def start():
+	game = Gallow()
+	game.round()
 
 if __name__ =='__main__':
-	round()
+	start()
