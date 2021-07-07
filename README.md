@@ -9,3 +9,7 @@ pytest -s --cov=. tests.py
 WITHOUT COVERAGE:
 
 pytest -s tests.py
+
+!WARNING!
+
+Do not run tests only!
