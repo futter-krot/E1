@@ -7,7 +7,7 @@ class TestClass:
 
     def test_round(self):
         game = gallows.Gallow()
-        assert game.round() == None
+        assert game.round == None
 
     def test_input(self):
         gallows.input = lambda _: 'ans'
