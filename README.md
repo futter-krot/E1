@@ -1,5 +1,5 @@
 # E1
-game "hanging"
+Gallows
 
 INSTRUCTION (ALL IN ONE):
 type this command to run THE GAME, THE TESTS, THE COVERAGE:
