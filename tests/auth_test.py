@@ -1,7 +1,7 @@
 import sys, pytest, pytest_cov
+sys.path.append(os.getcwd())
 from .. import gallows
 
-sys.path.append(os.getcwd())
 
 class TestClass:
 
