@@ -12,4 +12,4 @@ pytest -s tests.py
 
 !WARNING!
 
-Do not run tests only!
+!DO NOT RUN TESTS ONLY!
